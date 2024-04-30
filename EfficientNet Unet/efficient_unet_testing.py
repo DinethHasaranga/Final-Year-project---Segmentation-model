@@ -101,7 +101,4 @@ if __name__ == "__main__":
     df = pd.DataFrame(SCORE, columns=["Image", "F1", "Jaccard", "Recall", "Precision"])
     df.to_csv("files/score.csv")
 
-    # F1: 0.75849
-    # Jaccard: 0.67146
-    # Recall: 0.76236
-    # Precision: 0.81083
+  
