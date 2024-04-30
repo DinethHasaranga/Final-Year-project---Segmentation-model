@@ -21,6 +21,9 @@ W = 256
 def create_dir(path):
     if not os.path.exists(path):
         os.makedirs(path)
+        
+#Generates visualizations of image segmentation results by concatenating the original image, ground truth mask, 
+#and predicted mask horizontally with separating lines and saves the resulting visualization to a file.
 
 def save_results(image, mask, y_pred, save_image_path):
     mask = np.expand_dims(mask, axis=-1)
@@ -72,10 +75,8 @@ if __name__ == "__main__":
         y_pred = y_pred >= 0.5
         y_pred = y_pred.astype(np.int32)
 
-
         save_image_path = os.path.join("results", name)
         save_results(image, mask, y_pred, save_image_path)
-
 
         mask = mask/255.0
         mask = (mask > 0.5).astype(np.int32).flatten()
@@ -99,7 +100,4 @@ if __name__ == "__main__":
     df = pd.DataFrame(SCORE, columns=["Image", "F1", "Jaccard", "Recall", "Precision"])
     df.to_csv("files/score.csv")
 
-    # F1: 0.77527
-    # Jaccard: 0.68943
-    # Recall: 0.79321
-    # Precision: 0.80297
+    
