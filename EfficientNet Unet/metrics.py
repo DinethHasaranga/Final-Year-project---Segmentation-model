@@ -3,6 +3,7 @@ import tensorflow as tf
 from tensorflow.keras import backend as K
 
 smooth = 1e-15
+#Calculation of Dice Coefficient
 def dice_coef(y_true, y_pred):
     y_true = tf.keras.layers.Flatten()(y_true)
     y_pred = tf.keras.layers.Flatten()(y_pred)
