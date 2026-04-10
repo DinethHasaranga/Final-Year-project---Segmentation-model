@@ -1,2 +1,2 @@
-# Final-Year-project---Segmentation-model
+# Final-Year-Research-project---Segmentation-model
 ANALYSIS OF BRAIN TUMOR SEGMENTATION FROM MRI IMAGES OF THE BRAIN USING UNET ARCHITECTURE WITH DIFFERENT ENCORDERS.
